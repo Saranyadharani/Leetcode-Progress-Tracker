@@ -29,22 +29,21 @@ class Solution(object):
 My Solution:
 
 Four State Variables Approach:
-buy1 = Max profit with first stock bought (negative initial cost)
+1)buy1 = Max profit with first stock bought (negative initial cost)
 
-text
-buy1 = max(buy1, -price)
+2)buy1 = max(buy1, -price)
 sell1 = Max profit after first stock sold
 
-text
-sell1 = max(sell1, buy1 + price)
+
+3)sell1 = max(sell1, buy1 + price)
 buy2 = Max profit with second stock bought (using profit from first sale)
 
-text
-buy2 = max(buy2, sell1 - price)
+
+4)buy2 = max(buy2, sell1 - price)
 sell2 = Max profit after second stock sold (final answer)
 
-text
-sell2 = max(sell2, buy2 + price)
+
+5)sell2 = max(sell2, buy2 + price)
 Key Insights:
 Sequential processing - each price updates all four states
 
